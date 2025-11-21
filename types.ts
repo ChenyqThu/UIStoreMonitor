@@ -9,6 +9,7 @@ export interface Product {
   name: string;
   sku: string;
   category: string;
+  subcategory?: string;
   currentPrice: number;
   currency: string;
   inStock: boolean;

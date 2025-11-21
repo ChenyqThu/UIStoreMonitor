@@ -1,0 +1,2032 @@
+Request:
+Request URL
+https://store.ui.com/_next/data/c3d3bb77b/us/en/category/all-cloud-gateways.json?store=us&language=en&category=all-cloud-gateways
+Request Method:GET
+Status Code:200 OK
+Remote Address:44.237.78.125:443
+Referrer Policy:origin-when-cross-origin
+:authority
+store.ui.com
+:method
+GET
+:path
+/_next/data/c3d3bb77b/us/en/category/all-cloud-gateways.json?store=us&language=en&category=all-cloud-gateways
+:scheme
+https
+accept
+*/*
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+zh-CN,zh;q=0.9
+baggage
+sentry-environment=prod,sentry-release=c3d3bb77b,sentry-public_key=f565ed7b79f144209785c4b3a343c4ae,sentry-trace_id=fe7e4b4c25ce4c5dbe09b138e6d5e9f5,sentry-transaction=%2F%5Bstore%5D%2F%5Blanguage%5D%2Fcategory%2F%5Bcategory%5D,sentry-sampled=false,sentry-sample_rand=0.7359351168756664,sentry-sample_rate=0.005
+Response:
+{
+    "pageProps": {
+        "referer": "https://store.ui.com/us/en",
+        "isAppView": false,
+        "isStoreAppView": false,
+        "storeAppEventVersion": null,
+        "deviceType": "desktop",
+        "appPlatform": null,
+        "subCategories": [
+            {
+                "id": "cloud-gateways-enterprise-scale",
+                "canShowCompareView": true,
+                "hasNewNavigationLayout": false,
+                "products": [
+                    {
+                        "id": "65adb8bd-c318-45f9-8b9f-9c15fb025ec2",
+                        "slug": "efg",
+                        "historicalSlugs": [],
+                        "name": "EFG",
+                        "title": "Enterprise Fortress Gateway",
+                        "shortTitle": "Enterprise Fortress Gateway",
+                        "shortDescription": "25G Cloud Gateway with 500+ UniFi device / 5,000+ client support, 12.5 Gbps IPS routing, and complete high availability.",
+                        "collectionSlug": "enterprise-fortress-gateway",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "1408f9e8-579a-50d5-99cb-baa94ca11cde",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "26f9deb2-2de8-5267-a518-92d3b96c6f74",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "a4379869-8ae4-512b-bb20-f0a795773bf4",
+                                            "value": "12.5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 199900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "7321698a-e18b-4038-8ac1-f23d8d124c50",
+                            "url": "https://cdn.ecomm.ui.com/products/65adb8bd-c318-45f9-8b9f-9c15fb025ec2/7321698a-e18b-4038-8ac1-f23d8d124c50.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "techspecs-sort-weight:10020",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:5020",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "5000-capacity",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "next-ai-cybersecurity",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25g-sfp28",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:5000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:500",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:12-5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:redundant-power",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "partnerprogram",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "upilnk-cable",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "2133715d-db99-4953-a4d4-c17a9e6e9b79",
+                                "sku": "EFG",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 199900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-enterprise-scale",
+                        "linkedProducts": []
+                    }
+                ],
+                "sections": null,
+                "fullProducts": null
+            },
+            {
+                "id": "cloud-gateways-large-scale",
+                "canShowCompareView": true,
+                "hasNewNavigationLayout": false,
+                "products": [
+                    {
+                        "id": "401190d7-6a49-4c2e-bef1-7fe087d2b6b6",
+                        "slug": "udm-pro-max",
+                        "historicalSlugs": [],
+                        "name": "UDM-Pro-Max",
+                        "title": "Dream Machine Pro Max",
+                        "shortTitle": "Dream Machine Pro Max",
+                        "shortDescription": "10G Cloud Gateway with 200+ UniFi device / 2,000+ client support, 5 Gbps IPS routing, and redundant NVR storage.",
+                        "collectionSlug": "unifi-dream-machine",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "36a99ef3-2b82-5221-8008-a6de3fbdcc07",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "08e8da92-3e00-5b8a-a105-b0d6d02df293",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "4475dba4-85a5-56ba-949c-97552925d728",
+                                            "value": "5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 59900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "95713566-423f-45e1-8b40-6d760f048490",
+                            "url": "https://cdn.ecomm.ui.com/products/401190d7-6a49-4c2e-bef1-7fe087d2b6b6/95713566-423f-45e1-8b40-6d760f048490.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:5015",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:10015",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:integrated-storage",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:2000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:200",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:redundant-power",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "upilnk-cable",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "592a4d92-2d19-49a0-ad73-74d6629218d8",
+                                "sku": "UDM-Pro-Max",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 59900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-large-scale",
+                        "linkedProducts": []
+                    },
+                    {
+                        "id": "9df27ed4-c4ae-471a-8982-f5b0650da76a",
+                        "slug": "udm-pro",
+                        "historicalSlugs": [
+                            "udm-pro",
+                            "udm-pro-u"
+                        ],
+                        "name": "UDM-Pro",
+                        "title": "Dream Machine Pro",
+                        "shortTitle": "Dream Machine Pro",
+                        "shortDescription": "10G Cloud Gateway with 100+ UniFi device / 1,000+ client support and 3.5 Gbps IPS routing.",
+                        "collectionSlug": "unifi-dream-machine",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "130f51c7-b36a-4249-bef3-a129c44105ad",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "c3d1f426-5eda-5dee-9062-5c503b7553e9",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "dab28f35-3a6f-58ed-a5c7-055d6291d261",
+                                            "value": "3.5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 37900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "2ede4300-385f-4043-8d96-e0400a22465f",
+                            "url": "https://cdn.ecomm.ui.com/products/9df27ed4-c4ae-471a-8982-f5b0650da76a/2ede4300-385f-4043-8d96-e0400a22465f.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:5010",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:10010",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:redundant-power",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:1000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:100",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:3-5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "upilnk-cable",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "6e42a82b-d749-47cb-903c-36854865bde5",
+                                "sku": "UDM-Pro",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 37900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-large-scale",
+                        "linkedProducts": []
+                    },
+                    {
+                        "id": "1b6fcc08-a6b8-4496-a831-6125a47c412f",
+                        "slug": "udm-se",
+                        "historicalSlugs": [
+                            "dream-machine-se",
+                            "udm-pro-se",
+                            "udm-se"
+                        ],
+                        "name": "UDM-SE",
+                        "title": "Dream Machine Special Edition",
+                        "shortTitle": "Dream Machine Special Edition",
+                        "shortDescription": "10G Cloud Gateway with 100+ UniFi device / 1,000+ client support, 3.5 Gbps IPS routing, and built-in PoE switching.",
+                        "collectionSlug": "unifi-dream-machine",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "d09c7953-b1c7-5928-b09f-33354f091ece",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "757aba2e-79e2-5ef7-90c6-ac4d09048bf4",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "eb1e869e-5050-5ca3-b0a8-c0427281a58b",
+                                            "value": "3.5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 49900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "1aaaac38-597b-4125-b0de-7a2671580b21",
+                            "url": "https://cdn.ecomm.ui.com/products/1b6fcc08-a6b8-4496-a831-6125a47c412f/1aaaac38-597b-4125-b0de-7a2671580b21.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "feature:poe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "poe:180w",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:5005",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:10005",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:1000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:100",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:3-5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:integrated-storage",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:redundant-power",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "upilnk-cable",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "2c3aaf6e-4197-45b2-9c38-d2d4da762389",
+                                "sku": "UDM-SE",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 49900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-large-scale",
+                        "linkedProducts": []
+                    }
+                ],
+                "sections": null,
+                "fullProducts": null
+            },
+            {
+                "id": "cloud-gateways-compact",
+                "canShowCompareView": true,
+                "hasNewNavigationLayout": false,
+                "products": [
+                    {
+                        "id": "48cf74fa-0456-4c5f-bbcc-c1a1ffdc11f9",
+                        "slug": "ucg-fiber",
+                        "historicalSlugs": [],
+                        "name": "UCG-Fiber",
+                        "title": "Cloud Gateway Fiber",
+                        "shortTitle": "Cloud Gateway Fiber",
+                        "shortDescription": "Desktop 10G Cloud Gateway with integrated 4-port 2.5 GbE switch, selectable NVR storage, and full UniFi application support.",
+                        "collectionSlug": "cloud-gateway-compact",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "0e008505-dd54-49ce-a699-6d7cc1c287be",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "6dee347b-e8bb-57d9-9b3d-96c28ab3525e",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "e729a9b1-13d8-588d-8ae4-7989af398823",
+                                            "value": "5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": "cloud-gateway-fiber",
+                        "options": [],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 27900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "465257f3-0acc-4a11-bb15-762e7f6c0e9c",
+                            "url": "https://cdn.ecomm.ui.com/products/48cf74fa-0456-4c5f-bbcc-c1a1ffdc11f9/465257f3-0acc-4a11-bb15-762e7f6c0e9c.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "poe:30w",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:poe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:5003",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:10003",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "ucg-fiber",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "fiber-gateway",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "fiber-gateway-ns",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:50",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:500",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "ucg",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:eu:ucg-fiber-eu:2025-02-26",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:us:ucg-fiber:2025-02-26",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:ca:ucg-fiber:2025-02-26",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:us:ucg-fiber:date:2025-02-26",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:ca:ucg-fiber:date:2025-02-26",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "available:eu:ucg-fiber-eu:date:2025-02-26",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "d624adfa-8090-4fad-814f-bb8d281dc10f",
+                                "sku": "UCG-Fiber",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 27900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [
+                                    {
+                                        "bundledProductId": "9606ad37-7c08-4f76-9763-5711be2ff3ea",
+                                        "bundledProductVariantId": "1dafbb97-d2f8-4046-a959-d3d8b99155e1",
+                                        "bundledStoreProductVariantId": "8fbb2e55-71bd-467c-a9a2-67a0e866b738",
+                                        "benefit": {
+                                            "storePrice": {
+                                                "amount": 3000,
+                                                "currency": "USD",
+                                                "__typename": "Money"
+                                            },
+                                            "__typename": "FixedDiscountBenefit"
+                                        },
+                                        "requirements": [
+                                            {
+                                                "meetsRequirement": true,
+                                                "__typename": "AvailabilityRequirement"
+                                            },
+                                            {
+                                                "meetsRequirement": true,
+                                                "minProductQty": 1,
+                                                "maxProductQty": 1,
+                                                "__typename": "BundleQuantityUsageRequirement"
+                                            }
+                                        ],
+                                        "__typename": "DiscountBundleMetadata"
+                                    },
+                                    {
+                                        "bundledProductId": "9dba9058-030d-4b5c-b6fa-66be4b813fbb",
+                                        "bundledProductVariantId": "7b509a42-6b6b-4247-aef7-cffd5e83818f",
+                                        "bundledStoreProductVariantId": "42b177e9-ffc5-45d9-8ca6-d1b04cbef10c",
+                                        "benefit": {
+                                            "storePrice": {
+                                                "amount": 3000,
+                                                "currency": "USD",
+                                                "__typename": "Money"
+                                            },
+                                            "__typename": "FixedDiscountBenefit"
+                                        },
+                                        "requirements": [
+                                            {
+                                                "meetsRequirement": true,
+                                                "__typename": "AvailabilityRequirement"
+                                            },
+                                            {
+                                                "meetsRequirement": true,
+                                                "minProductQty": 1,
+                                                "maxProductQty": 1,
+                                                "__typename": "BundleQuantityUsageRequirement"
+                                            }
+                                        ],
+                                        "__typename": "DiscountBundleMetadata"
+                                    }
+                                ],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-compact",
+                        "linkedProducts": [
+                            {
+                                "id": "9606ad37-7c08-4f76-9763-5711be2ff3ea",
+                                "slug": "uacc-ssd-2tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "8fbb2e55-71bd-467c-a9a2-67a0e866b738",
+                                        "sku": "UACC-SSD-2TB",
+                                        "slug": "uacc-ssd-2tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 28000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            },
+                            {
+                                "id": "9dba9058-030d-4b5c-b6fa-66be4b813fbb",
+                                "slug": "uacc-ssd-1tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "42b177e9-ffc5-45d9-8ca6-d1b04cbef10c",
+                                        "sku": "UACC-SSD-1TB",
+                                        "slug": "uacc-ssd-1tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 15000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "8cca3680-14a6-496a-af7d-beba49cea3f2",
+                        "slug": "ucg-max",
+                        "historicalSlugs": [],
+                        "name": "UCG-Max",
+                        "title": "Cloud Gateway Max",
+                        "shortTitle": "Cloud Gateway Max",
+                        "shortDescription": "Compact 2.5G Cloud Gateway with 30+ UniFi device / 300+ client support, 2.3 Gbps IPS routing, and selectable NVR storage.",
+                        "collectionSlug": "cloud-gateway-compact",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "558a2742-c88d-5562-a7f0-a3fb35cafe9f",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "b1655318-6c97-56eb-b5c0-f2a4b756d4b1",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "3c198f55-d06f-5a44-93b4-17adcd0e4a90",
+                                            "value": "2.3 Gbps",
+                                            "note": "With UniFi OS 4.1 or later.",
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": "cloud-gateway-max",
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 17900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": {
+                            "amount": 27900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "7c6f4e54-1f20-485a-a0f0-22e968b66a66",
+                            "url": "https://cdn.ecomm.ui.com/products/8cca3680-14a6-496a-af7d-beba49cea3f2/7c6f4e54-1f20-485a-a0f0-22e968b66a66.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "pro-sort-weight:5000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:10000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "ucg-max",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "gateway",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pre-installed-ssd",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:integrated-storage",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:300",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:30",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:2-3",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "black-friday",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "0d996019-1ab9-4279-b247-3969c2092bfb",
+                                "sku": "UCG-Max",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 17900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": {
+                                    "amount": 27900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-compact",
+                        "linkedProducts": [
+                            {
+                                "id": "9606ad37-7c08-4f76-9763-5711be2ff3ea",
+                                "slug": "uacc-ssd-2tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "8fbb2e55-71bd-467c-a9a2-67a0e866b738",
+                                        "sku": "UACC-SSD-2TB",
+                                        "slug": "uacc-ssd-2tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 28000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            },
+                            {
+                                "id": "9dba9058-030d-4b5c-b6fa-66be4b813fbb",
+                                "slug": "uacc-ssd-1tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "42b177e9-ffc5-45d9-8ca6-d1b04cbef10c",
+                                        "sku": "UACC-SSD-1TB",
+                                        "slug": "uacc-ssd-1tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 15000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "8a5d9bab-2338-4540-abc7-dd9486b93e07",
+                        "slug": "ucg-max-ns",
+                        "historicalSlugs": [],
+                        "name": "UCG-Max-NS",
+                        "title": "Cloud Gateway Max NS",
+                        "shortTitle": "Cloud Gateway Max",
+                        "shortDescription": "Compact 2.5G Cloud Gateway with 30+ UniFi device / 300+ client support, 2.3 Gbps IPS routing, and selectable NVR storage.",
+                        "collectionSlug": "cloud-gateway-compact",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "350fcee0-7625-58d3-aa0c-4c75988b7431",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "43efbc85-9a96-5a1c-80f9-ae7a43a4bbfd",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "1ed2ab83-19f5-5743-ba9b-1778bc473d2c",
+                                            "value": "2.3 Gbps",
+                                            "note": "With UniFi OS 4.1 or later.",
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": "cloud-gateway-max",
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 15900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": {
+                            "amount": 19900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "59e044c5-76e4-4b02-a575-9698c457dfc9",
+                            "url": "https://cdn.ecomm.ui.com/products/8a5d9bab-2338-4540-abc7-dd9486b93e07/59e044c5-76e4-4b02-a575-9698c457dfc9.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "pro-sort-weight:4999",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9999",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "ucg-max",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "gateway",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "optional-ssd",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "compare:hide",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "exclude-from-techspecs-grid",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:300",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:30",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:2-3",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "black-friday",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "cf208a0c-3cb3-4762-9649-4f4fa8028dfe",
+                                "sku": "UCG-Max-NS",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 15900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": {
+                                    "amount": 19900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-compact",
+                        "linkedProducts": [
+                            {
+                                "id": "9606ad37-7c08-4f76-9763-5711be2ff3ea",
+                                "slug": "uacc-ssd-2tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "8fbb2e55-71bd-467c-a9a2-67a0e866b738",
+                                        "sku": "UACC-SSD-2TB",
+                                        "slug": "uacc-ssd-2tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 28000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            },
+                            {
+                                "id": "9dba9058-030d-4b5c-b6fa-66be4b813fbb",
+                                "slug": "uacc-ssd-1tb",
+                                "historicalSlugs": [],
+                                "status": "Available",
+                                "variants": [
+                                    {
+                                        "id": "42b177e9-ffc5-45d9-8ca6-d1b04cbef10c",
+                                        "sku": "UACC-SSD-1TB",
+                                        "slug": "uacc-ssd-1tb",
+                                        "status": "Available",
+                                        "displayPrice": {
+                                            "amount": 15000,
+                                            "currency": "USD",
+                                            "__typename": "Money"
+                                        },
+                                        "displayRegularPrice": null,
+                                        "__typename": "StorefrontProductVariant"
+                                    }
+                                ],
+                                "__typename": "StorefrontProduct"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "8d2d9e4b-89f3-49a1-9c17-5d774c0067b4",
+                        "slug": "ucg-ultra",
+                        "historicalSlugs": [],
+                        "name": "UCG-Ultra",
+                        "title": "Cloud Gateway Ultra",
+                        "shortTitle": "Cloud Gateway Ultra",
+                        "shortDescription": "Compact Cloud Gateway with 30+ UniFi device / 300+ client support, 1 Gbps IPS routing, and multi-WAN load balancing.",
+                        "collectionSlug": "cloud-gateway-compact",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "b870c42d-56a8-5de7-8533-92d2740bdb58",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "3f6d3a50-0929-5360-bdc6-237d215c9dd6",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "06906182-e82f-5110-8a3a-aac0acf38019",
+                                            "value": "Network",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "2e671b12-6b45-4240-aea4-4b3b418b6814",
+                                                "icon": "apps",
+                                                "label": "App Suite",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "app-suite",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        },
+                                        {
+                                            "id": "064a8c7a-6646-5a66-a780-93ff05fe4ea6",
+                                            "value": "1 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 12900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "2e179331-f85a-4bc9-bf3e-d00192522732",
+                            "url": "https://cdn.ecomm.ui.com/products/8d2d9e4b-89f3-49a1-9c17-5d774c0067b4/2e179331-f85a-4bc9-bf3e-d00192522732.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "ultra",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "product-ultra",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9995",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:300",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:30",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:1",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:4999",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "c2655edc-a267-490c-82b5-0f5be5f91618",
+                                "sku": "UCG-Ultra",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 12900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-compact",
+                        "linkedProducts": []
+                    }
+                ],
+                "sections": null,
+                "fullProducts": null
+            },
+            {
+                "id": "cloud-gateways-wifi-integrated",
+                "canShowCompareView": true,
+                "hasNewNavigationLayout": false,
+                "products": [
+                    {
+                        "id": "5fd748ec-76b6-48ca-9256-9fb09d50b4b0",
+                        "slug": "udr7",
+                        "historicalSlugs": [],
+                        "name": "UDR7",
+                        "title": "Dream Router 7",
+                        "shortTitle": "Dream Router 7",
+                        "shortDescription": "Desktop 10G Cloud Gateway with integrated WiFi 7, PoE switch, microSD storage, and full UniFi application support.",
+                        "collectionSlug": "cloud-gateways-wifi-integrated",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "9944e52c-82e4-4b5e-bf00-97073db9a660",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "d1d52a32-2158-5027-ac3d-22eaec68d59a",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "84111a7b-68d3-5f9c-9e0a-f3173cd9d286",
+                                            "value": "2.3 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 22900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": {
+                            "amount": 27900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "c57b6e85-cf5b-48c8-9e92-9f25e4dd0f39",
+                            "url": "https://cdn.ecomm.ui.com/products/5fd748ec-76b6-48ca-9256-9fb09d50b4b0/c57b6e85-cf5b-48c8-9e92-9f25e4dd0f39.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "feature:wifi7",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:wifi-7",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:poe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:wifi-integrated",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:4992",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9988",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "poe:15w",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:2-3",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:30",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:integrated-storage",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:300",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "black-friday",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "4dc4704a-61ec-42f4-9214-f46fc5038de0",
+                                "sku": "UDR7-US",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 22900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": {
+                                    "amount": 27900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-wifi-integrated",
+                        "linkedProducts": []
+                    },
+                    {
+                        "id": "d3220754-f4a9-4ecc-a0bd-64e1520ef471",
+                        "slug": "ux7",
+                        "historicalSlugs": [],
+                        "name": "UX7",
+                        "title": "UniFi Express 7",
+                        "shortTitle": "UniFi Express 7",
+                        "shortDescription": "Mesh-scalable, super-compact 10G Cloud Gateway with integrated WiFi 7.",
+                        "collectionSlug": "cloud-gateways-wifi-integrated",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "01a54661-88f9-4b33-a43e-1fe591c818c6",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "f0a3965d-08a6-52a4-9f0b-dd1f21e1b44c",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "6fa9f462-f1c9-57e1-a6be-5389990bf830",
+                                            "value": "2.3 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [
+                            {
+                                "id": "492f18b6-0811-4f85-8e11-8c0c6a1a5c4a",
+                                "title": "Variant",
+                                "values": [
+                                    {
+                                        "id": "7520fcb9-7ace-406d-a981-3be70cc75712",
+                                        "title": "US Version",
+                                        "__typename": "StorefrontOptionValue"
+                                    }
+                                ],
+                                "__typename": "StorefrontOption"
+                            }
+                        ],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 19900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": null,
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "5985679e-1cac-4885-ad85-82e2d5c94f89",
+                            "url": "https://cdn.ecomm.ui.com/products/d3220754-f4a9-4ecc-a0bd-64e1520ef471/5985679e-1cac-4885-ad85-82e2d5c94f89.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "pro-sort-weight:4990",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9990",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:wifi-integrated",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:wifi7",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:4993",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9993",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:2-3",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:30",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:300",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "942f4d08-3ac8-43c7-bec5-1da39a9b4890",
+                                "sku": "UX7-US",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 19900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": null,
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-wifi-integrated",
+                        "linkedProducts": []
+                    },
+                    {
+                        "id": "df8c3478-6280-45c0-80e3-78915f9c17c1",
+                        "slug": "udw",
+                        "historicalSlugs": [
+                            "dream-wall",
+                            "dream-wall-ea",
+                            "udw",
+                            "unifi-dream-wall"
+                        ],
+                        "name": "UDW",
+                        "title": "Dream Wall",
+                        "shortTitle": "Dream Wall",
+                        "shortDescription": "Wall-mounted 10G Cloud Gateway with integrated WiFi 6, high-power PoE switching, and full UniFi application support.",
+                        "collectionSlug": "cloud-gateways-wifi-integrated",
+                        "organizationalCollectionSlug": null,
+                        "technicalSpecification": {
+                            "id": "95604f0f-0f53-46aa-91c9-c941050f2ce8",
+                            "hasCompareData": true,
+                            "template": {
+                                "id": "b75d54df-c623-4c92-8e5a-26580e0ca5f6",
+                                "title": "Cloud Gateways",
+                                "__typename": "SpecificationTemplate"
+                            },
+                            "sections": [
+                                {
+                                    "id": "ad176383-8ec1-59d0-aadc-51f895e1cf16",
+                                    "section": {
+                                        "id": "2d0451ea-7238-41f9-8a91-6935df369f5e",
+                                        "label": "Grid overview",
+                                        "slug": "grid-overview",
+                                        "type": "Overview",
+                                        "__typename": "SpecificationSection"
+                                    },
+                                    "features": [
+                                        {
+                                            "id": "e43eebe2-265a-5b7b-884d-2a5361c8925b",
+                                            "value": "3.5 Gbps",
+                                            "note": null,
+                                            "isUsedInCompare": true,
+                                            "feature": {
+                                                "id": "efa1c28c-b1f1-4b84-ab52-7268485ec3bb",
+                                                "icon": "streams",
+                                                "label": "IDS/IPS",
+                                                "note": null,
+                                                "parentId": null,
+                                                "slug": "idsslaships",
+                                                "__typename": "SpecificationSectionFeature"
+                                            },
+                                            "__typename": "SpecificationEntitySectionFeatureEntryText"
+                                        }
+                                    ],
+                                    "__typename": "SpecificationEntitySection"
+                                }
+                            ],
+                            "__typename": "SpecificationEntity"
+                        },
+                        "proCollectionSlug": null,
+                        "options": [],
+                        "taxRate": null,
+                        "hasTaxIncludedPrice": false,
+                        "minDisplayPrice": {
+                            "amount": 59900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "minDisplayRegularPrice": {
+                            "amount": 99900,
+                            "currency": "USD",
+                            "__typename": "Money"
+                        },
+                        "status": "Available",
+                        "thumbnail": {
+                            "id": "b3abc194-6177-499a-ab20-6e21b47629ae",
+                            "url": "https://cdn.ecomm.ui.com/products/df8c3478-6280-45c0-80e3-78915f9c17c1/b3abc194-6177-499a-ab20-6e21b47629ae.png",
+                            "height": 3000,
+                            "width": 3000,
+                            "mimeType": "image/png",
+                            "__typename": "Asset"
+                        },
+                        "tags": [
+                            {
+                                "name": "feature:poe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:wifi-integrated",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "poe:420w",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "support-banner",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "techspecs-sort-weight:9980",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "pro-sort-weight:4980",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:10g-sfp-plus",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:25-gbe",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:integrated-storage",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:redundant-power",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:unifi-devices:100",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:performance-client-devices:1000",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "feature:throughput-rate:3-5",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "holiday-offer",
+                                "__typename": "ProductTag"
+                            },
+                            {
+                                "name": "black-friday",
+                                "__typename": "ProductTag"
+                            }
+                        ],
+                        "variants": [
+                            {
+                                "id": "70480387-b239-41a9-8026-952ec4bf4fa9",
+                                "sku": "UDW-US",
+                                "hasUiCare": true,
+                                "displayPrice": {
+                                    "amount": 59900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "displayRegularPrice": {
+                                    "amount": 99900,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "campaignDiscounts": [],
+                                "bundleDiscounts": [],
+                                "availableInOtherStores": [],
+                                "isVisibleInStore": true,
+                                "__typename": "StorefrontProductVariant"
+                            }
+                        ],
+                        "__typename": "StorefrontProduct",
+                        "subcategoryId": "cloud-gateways-wifi-integrated",
+                        "linkedProducts": []
+                    }
+                ],
+                "sections": null,
+                "fullProducts": null
+            }
+        ],
+        "queryParams": {
+            "category": "all-cloud-gateways"
+        },
+        "storeId": "us",
+        "language": "en"
+    },
+    "__N_SSP": true
+}
