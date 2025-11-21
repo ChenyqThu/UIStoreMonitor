@@ -34,15 +34,39 @@ export const ProductDetail: React.FC = () => {
     fetchProduct();
   }, [id, navigate]);
 
-  if (!product) return null;
+  // Group history by date, taking the latest entry for each day
+  // Must be before early return to maintain consistent hook order
+  const processedHistory = React.useMemo(() => {
+    if (!product) return [];
+
+    const grouped = new Map<string, typeof product.history[0]>();
+
+    // Sort by date ascending to ensure we process in order
+    const sortedHistory = [...product.history].sort((a, b) =>
+      new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+
+    sortedHistory.forEach(h => {
+      // Use locale date string as key to group by day
+      const dateKey = new Date(h.date).toLocaleDateString();
+      // Since we sorted ascending, setting the key repeatedly will leave the last (latest) entry
+      grouped.set(dateKey, h);
+    });
+
+    return Array.from(grouped.values());
+  }, [product]);
 
   // Format data for Recharts
-  const chartData = product.history.map(h => ({
-    date: new Date(h.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
-    price: h.price,
-    inStock: h.inStock ? 1 : 0,
-    stockLabel: h.inStock ? 'In Stock' : 'Out'
-  }));
+  const chartData = React.useMemo(() => {
+    return processedHistory.map(h => ({
+      date: new Date(h.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
+      price: h.price,
+      inStock: h.inStock ? 1 : 0,
+      stockLabel: h.inStock ? 'In Stock' : 'Out'
+    }));
+  }, [processedHistory]);
+
+  if (!product) return null;
 
   const formatCurrency = (val: number) => `$${val.toFixed(2)}`;
 
