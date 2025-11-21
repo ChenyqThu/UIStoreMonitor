@@ -25,6 +25,7 @@ export enum SortOption {
   PriceAsc = 'PRICE_ASC',
   PriceDesc = 'PRICE_DESC',
   Status = 'STATUS',
+  Subcategory = 'SUBCATEGORY',
 }
 
 export enum FilterCategory {

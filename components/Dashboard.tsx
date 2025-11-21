@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Product, SortOption, FilterCategory } from '../types';
 import * as storeService from '../services/storeService';
-import { Search, RefreshCw, ArrowUpDown, ArrowUp, ArrowDown, CheckCircle2, XCircle } from 'lucide-react';
+import { Search, RefreshCw, ArrowUpDown, ArrowUp, ArrowDown, CheckCircle2, XCircle, Eye, ExternalLink } from 'lucide-react';
 
 export const Dashboard: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -45,6 +45,7 @@ export const Dashboard: React.FC = () => {
         case SortOption.PriceAsc: return a.currentPrice - b.currentPrice;
         case SortOption.PriceDesc: return b.currentPrice - a.currentPrice;
         case SortOption.Status: return (a.inStock === b.inStock) ? 0 : a.inStock ? -1 : 1;
+        case SortOption.Subcategory: return (a.subcategory || '').localeCompare(b.subcategory || '');
         default: return 0;
       }
     });
@@ -57,55 +58,6 @@ export const Dashboard: React.FC = () => {
     return inStock
       ? 'bg-emerald-100 text-emerald-800 border-emerald-200'
       : 'bg-rose-100 text-rose-800 border-rose-200';
-  };
-
-  // Column Resizing Logic
-  const [columnWidths, setColumnWidths] = useState<Record<string, number>>(() => {
-    const saved = localStorage.getItem('dashboard_column_widths');
-    return saved ? JSON.parse(saved) : {
-      product: 300,
-      category: 150,
-      status: 150,
-      price: 120,
-      lastCheck: 150,
-      actions: 100
-    };
-  });
-
-  useEffect(() => {
-    localStorage.setItem('dashboard_column_widths', JSON.stringify(columnWidths));
-  }, [columnWidths]);
-
-  const dragState = React.useRef<{ colKey: string; startX: number; startWidth: number } | null>(null);
-
-  const handleMouseMove = React.useCallback((e: MouseEvent) => {
-    if (!dragState.current) return;
-    const { colKey, startX, startWidth } = dragState.current;
-    const diff = e.pageX - startX;
-    setColumnWidths(prev => ({
-      ...prev,
-      [colKey]: Math.max(50, startWidth + diff)
-    }));
-  }, []);
-
-  const handleMouseUp = React.useCallback(() => {
-    dragState.current = null;
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
-    document.body.style.cursor = 'default';
-  }, [handleMouseMove]);
-
-  const handleMouseDown = (e: React.MouseEvent, colKey: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    dragState.current = {
-      colKey,
-      startX: e.pageX,
-      startWidth: columnWidths[colKey]
-    };
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    document.body.style.cursor = 'col-resize';
   };
 
   // Category formatting and sorting
@@ -232,6 +184,7 @@ export const Dashboard: React.FC = () => {
               <option value={SortOption.PriceAsc}>Price (Low to High)</option>
               <option value={SortOption.PriceDesc}>Price (High to Low)</option>
               <option value={SortOption.Status}>Stock Status</option>
+              <option value={SortOption.Subcategory}>Subcategory</option>
             </select>
           </div>
         </div>
@@ -240,12 +193,13 @@ export const Dashboard: React.FC = () => {
       {/* Table */}
       <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-slate-200 table-fixed">
+          <table className="min-w-full divide-y divide-slate-200">
             <thead className="bg-slate-50">
               <tr>
                 {[
                   { key: 'product', label: 'Product' },
                   { key: 'category', label: 'Category' },
+                  { key: 'subcategory', label: 'Subcategory' },
                   { key: 'status', label: 'Stock Status' },
                   { key: 'price', label: 'Price' },
                   { key: 'lastCheck', label: 'Last Check' },
@@ -254,14 +208,10 @@ export const Dashboard: React.FC = () => {
                   <th
                     key={col.key}
                     scope="col"
-                    style={{ width: columnWidths[col.key] }}
-                    className="relative px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider group select-none"
+                    className={`px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider select-none ${col.key === 'actions' ? 'sticky right-0 z-20 bg-slate-50 shadow-[-4px_0_8px_-4px_rgba(0,0,0,0.1)]' : ''
+                      }`}
                   >
                     {col.label}
-                    <div
-                      className="absolute right-0 top-0 bottom-0 w-1 cursor-col-resize hover:bg-blue-400 group-hover:bg-slate-300 transition-colors z-10"
-                      onMouseDown={(e) => handleMouseDown(e, col.key)}
-                    />
                   </th>
                 ))}
               </tr>
@@ -270,44 +220,64 @@ export const Dashboard: React.FC = () => {
               {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => (
                   <tr key={product.id} className="hover:bg-slate-50 transition-colors group">
-                    <td className="px-6 py-4 whitespace-nowrap overflow-hidden">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10 bg-gray-100 rounded-md overflow-hidden border border-gray-200">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <Link to={`/product/${product.id}`} className="flex items-center group/link">
+                        <div className="flex-shrink-0 h-10 w-10 bg-gray-100 rounded-md overflow-hidden border border-gray-200 group-hover/link:border-blue-300 transition-colors">
                           <img className="h-10 w-10 object-cover" src={product.imageUrl} alt="" />
                         </div>
-                        <div className="ml-4 overflow-hidden">
-                          <div className="text-sm font-medium text-slate-900 group-hover:text-blue-600 transition-colors truncate">{product.name}</div>
+                        <div className="ml-4">
+                          <div className="text-sm font-medium text-slate-900 group-hover/link:text-blue-600 transition-colors truncate max-w-[200px]">{product.name}</div>
                           <div className="text-xs text-slate-500 truncate">{product.sku}</div>
                         </div>
-                      </div>
+                      </Link>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap overflow-hidden">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-slate-100 text-slate-800 truncate max-w-full">
                         {formatCategory(product.category)}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap overflow-hidden">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="text-xs text-slate-500 truncate">
+                        {product.subcategory || '-'}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`px-2.5 py-0.5 inline-flex items-center text-xs font-medium rounded-full border ${getStatusColor(product.inStock)}`}>
                         {product.inStock ? <CheckCircle2 className="w-3 h-3 mr-1" /> : <XCircle className="w-3 h-3 mr-1" />}
                         {product.inStock ? 'In Stock' : 'Out of Stock'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium overflow-hidden">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-medium">
                       {formatCurrency(product.currentPrice)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500 overflow-hidden">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
                       {new Date(product.lastUpdated).toLocaleDateString()}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium overflow-hidden">
-                      <Link to={`/product/${product.id}`} className="text-blue-600 hover:text-blue-900 font-medium hover:underline">
-                        Details
-                      </Link>
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium sticky right-0 z-20 bg-white shadow-[-4px_0_8px_-4px_rgba(0,0,0,0.1)] group-hover:bg-slate-50 transition-colors">
+                      <div className="flex items-center justify-end gap-3">
+                        <a
+                          href={product.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-slate-400 hover:text-blue-600 transition-colors p-1 hover:bg-blue-50 rounded-full"
+                          title="View in Store"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                        <Link
+                          to={`/product/${product.id}`}
+                          className="text-slate-400 hover:text-blue-600 transition-colors p-1 hover:bg-blue-50 rounded-full"
+                          title="View Details"
+                        >
+                          <Eye className="w-5 h-5" />
+                        </Link>
+                      </div>
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-500">
+                  <td colSpan={7} className="px-6 py-12 text-center text-slate-500">
                     <div className="flex flex-col items-center justify-center">
                       <Search className="w-12 h-12 text-slate-300 mb-3" />
                       <p className="text-lg font-medium text-slate-900">No products found</p>
