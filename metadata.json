@@ -1,0 +1,5 @@
+{
+  "name": "UniFi Store Monitor",
+  "description": "A real-time dashboard to track Ubiquiti product prices, stock levels, and historical trends. Features a clean UI, data visualization, and simulated historical tracking.",
+  "requestFramePermissions": []
+}
