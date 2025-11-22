@@ -4,6 +4,7 @@ CREATE TABLE products (
   name TEXT NOT NULL,
   sku TEXT UNIQUE NOT NULL,
   category TEXT,
+  subcategory TEXT,
   current_price NUMERIC,
   currency TEXT,
   in_stock BOOLEAN,

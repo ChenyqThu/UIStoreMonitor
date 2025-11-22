@@ -39,7 +39,7 @@ git checkout develop
 |------|------|------|------|
 | v2.0.0 | Phase 1 | 数据库重构 + 爬虫更新 | [x] 已完成 |
 | v2.1.0 | Phase 2 | Dashboard 增强 | [x] 已完成 |
-| v2.2.0 | Phase 3 | ProductDetail 重构 | [ ] 待开始 |
+| v2.2.0 | Phase 3 | ProductDetail 重构 | [x] 已完成 |
 | v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [ ] 待开始 |
 | v2.4.0 | Phase 5 | 优化完善 | [ ] 待开始 |
 
@@ -244,15 +244,15 @@ components/
 
 | # | 任务 | 状态 | 负责 |
 |---|------|------|------|
-| 3.1 | 更新 getProductDetail API | [ ] | - |
-| 3.2 | 创建 VariantSelector 组件 | [ ] | - |
-| 3.3 | 创建 VariantTable 组件 | [ ] | - |
-| 3.4 | 增强 PriceHistoryChart (支持SKU筛选) | [ ] | - |
-| 3.5 | 创建 DiscountHistory 组件 | [ ] | - |
-| 3.6 | 创建 ProductFeatures 组件 | [ ] | - |
-| 3.7 | 更新 ProductDetail 页面布局 | [ ] | - |
-| 3.8 | 添加标签页切换 (价格/库存/折扣/特性) | [ ] | - |
-| 3.9 | 集成测试 | [ ] | - |
+| 3.1 | 更新 getProductDetail API | [x] | Claude |
+| 3.2 | 创建 VariantSelector 组件 | [x] | Claude |
+| 3.3 | 创建 VariantTable 组件 | [x] | Claude |
+| 3.4 | 增强 PriceHistoryChart (支持SKU筛选) | [x] | Claude |
+| 3.5 | 创建 DiscountHistory 组件 | [x] | Claude |
+| 3.6 | 创建 ProductFeatures 组件 | [x] | Claude |
+| 3.7 | 更新 ProductDetail 页面布局 | [x] | Claude |
+| 3.8 | 添加标签页切换 (价格/库存/折扣/特性) | [x] | Claude |
+| 3.9 | 集成测试 | [x] | Claude |
 
 ### 开发准备 (Review 2025-11-21)
 
@@ -350,17 +350,17 @@ Props: options[], variants[], selectedVariant, onSelect
 
 ### 验收标准
 
-- [ ] 变体选择器正确联动
-- [ ] 选择变体后价格/库存更新
-- [ ] 变体表正确显示所有 SKU
-- [ ] 价格历史支持按 SKU 筛选
-- [ ] 折扣历史正确展示
-- [ ] 产品特性正确分类显示
+- [x] 变体选择器正确联动
+- [x] 选择变体后价格/库存更新
+- [x] 变体表正确显示所有 SKU
+- [x] 价格历史支持按 SKU 筛选
+- [x] 折扣历史正确展示
+- [x] 产品特性正确分类显示
 
 ### 完成日期
-- 预计开始: ____
-- 预计完成: ____
-- 实际完成: ____
+- 预计开始: 2025-11-21
+- 预计完成: 2025-11-21
+- 实际完成: 2025-11-21
 
 ---
 
@@ -484,6 +484,7 @@ Props: options[], variants[], selectedVariant, onSelect
 | 2025-11-21 | v2.0.0 | Phase 1 代码开发完成：supabase_schema_v2.sql, crawler.ts, types.ts, storeService.ts |
 | 2025-11-22 | v2.0.0 | Phase 1 验收通过，数据入库成功 (425 products, 688 variants, 3257 tags) |
 | 2025-11-21 | v2.1.0 | Phase 2 Dashboard 增强完成：StatsOverview, FilterBar, QuickFilters, ProductTable, PriceDisplay, DiscountBadge, PromoTag |
+| 2025-11-21 | v2.2.0 | Phase 3 ProductDetail 重构完成：ProductInfo, VariantSelector, VariantTable, PriceHistoryChart, StockHistoryChart, DiscountHistory, ProductFeatures |
 
 ---
 
