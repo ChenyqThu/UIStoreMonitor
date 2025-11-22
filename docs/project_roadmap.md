@@ -38,7 +38,7 @@ git checkout develop
 | 版本 | 阶段 | 目标 | 状态 |
 |------|------|------|------|
 | v2.0.0 | Phase 1 | 数据库重构 + 爬虫更新 | [x] 已完成 |
-| v2.1.0 | Phase 2 | Dashboard 增强 | [ ] 待开始 |
+| v2.1.0 | Phase 2 | Dashboard 增强 | [x] 已完成 |
 | v2.2.0 | Phase 3 | ProductDetail 重构 | [ ] 待开始 |
 | v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [ ] 待开始 |
 | v2.4.0 | Phase 5 | 优化完善 | [ ] 待开始 |
@@ -134,18 +134,18 @@ History: 688
 
 | # | 任务 | 状态 | 复杂度 | 负责 |
 |---|------|------|--------|------|
-| 2.0 | 更新 Dashboard.tsx 适配新数据结构 | [ ] | 高 | - |
-| 2.1 | 创建 StatsOverview 组件 | [ ] | 中 | - |
-| 2.2 | 创建 StatsCard 通用组件 | [ ] | 低 | - |
+| 2.0 | 更新 Dashboard.tsx 适配新数据结构 | [x] | 高 | Claude |
+| 2.1 | 创建 StatsOverview 组件 | [x] | 中 | Claude |
+| 2.2 | 创建 StatsCard 通用组件 | [x] | 低 | Claude |
 | 2.3 | 添加统计数据查询 API | [x] | - | Claude |
-| 2.4 | 增强 FilterBar 组件 | [ ] | 中 | - |
-| 2.5 | 创建 QuickFilters 组件 | [ ] | 中 | - |
-| 2.6 | 更新 ProductTable 显示折扣 | [ ] | 高 | - |
-| 2.7 | 创建 PriceDisplay 组件 | [ ] | 低 | - |
-| 2.8 | 创建 DiscountBadge 组件 | [ ] | 低 | - |
-| 2.9 | 创建 PromoTag 组件 | [ ] | 低 | - |
-| 2.10 | 更新排序选项 (添加折扣排序) | [ ] | 低 | - |
-| 2.11 | 集成测试 | [ ] | - | - |
+| 2.4 | 增强 FilterBar 组件 | [x] | 中 | Claude |
+| 2.5 | 创建 QuickFilters 组件 | [x] | 中 | Claude |
+| 2.6 | 更新 ProductTable 显示折扣 | [x] | 高 | Claude |
+| 2.7 | 创建 PriceDisplay 组件 | [x] | 低 | Claude |
+| 2.8 | 创建 DiscountBadge 组件 | [x] | 低 | Claude |
+| 2.9 | 创建 PromoTag 组件 | [x] | 低 | Claude |
+| 2.10 | 更新排序选项 (添加折扣排序) | [x] | 低 | Claude |
+| 2.11 | 集成测试 | [x] | - | Claude |
 
 ### 开发准备 (Review 2025-11-22)
 
@@ -220,18 +220,18 @@ components/
 
 ### 验收标准
 
-- [ ] 统计卡片数据正确
-- [ ] 库存筛选正常工作
-- [ ] 折扣筛选正常工作
-- [ ] 快捷筛选标签可用
-- [ ] 折扣产品显示原价和折扣%
-- [ ] 多变体产品显示价格区间和 SKU 数量
-- [ ] 按折扣排序正常工作
+- [x] 统计卡片数据正确
+- [x] 库存筛选正常工作
+- [x] 折扣筛选正常工作
+- [x] 快捷筛选标签可用
+- [x] 折扣产品显示原价和折扣%
+- [x] 多变体产品显示价格区间和 SKU 数量
+- [x] 按折扣排序正常工作
 
 ### 完成日期
-- 预计开始: ____
-- 预计完成: ____
-- 实际完成: ____
+- 预计开始: 2025-11-21
+- 预计完成: 2025-11-21
+- 实际完成: 2025-11-21
 
 ---
 
@@ -254,6 +254,60 @@ components/
 | 3.8 | 添加标签页切换 (价格/库存/折扣/特性) | [ ] | - |
 | 3.9 | 集成测试 | [ ] | - |
 
+### 开发准备 (Review 2025-11-21)
+
+#### 当前 ProductDetail.tsx 分析
+
+现有实现使用旧数据结构，需要适配新结构：
+
+| 旧字段 | 新字段 | 说明 |
+|--------|--------|------|
+| `product.sku` | `product.slug` / `variant.sku` | SKU 移到变体级别 |
+| `product.currentPrice` | `product.minPrice/maxPrice` 或 `variant.currentPrice` | 价格区间或变体价格 |
+| `product.inStock` | `product.status` / `variant.inStock` | 状态移到变体级别 |
+| `product.history` | `variant_history` | 历史移到变体级别 |
+| - | `product.variants` | 新增：变体列表 |
+| - | `product.tags` | 新增：标签列表 |
+| - | `product.options` | 新增：选项定义 |
+| - | `product.specs` | 新增：技术规格 |
+
+#### 建议开发顺序
+
+1. **3.1 更新 getProductDetail API** - 确认已返回 variants, tags, options, specs
+2. **3.7 更新 ProductDetail 页面布局** - 适配新数据，添加变体信息区域
+3. **3.2 创建 VariantSelector** - 变体选择器（多变体产品显示）
+4. **3.3 创建 VariantTable** - 变体价格表（所有 SKU 一览）
+5. **3.4 增强 PriceHistoryChart** - 支持按 SKU 筛选，使用 variant_history
+6. **3.5 创建 DiscountHistory** - 折扣历史组件
+7. **3.6 创建 ProductFeatures** - 产品特性标签（分类展示 tags）
+8. **3.8 添加标签页切换** - 价格/库存/折扣/特性 标签页
+9. **3.9 集成测试**
+
+#### 组件目录结构
+
+```
+components/
+├── common/
+│   └── (已有组件...)
+├── dashboard/
+│   └── (已有组件...)
+├── product/                    # 新增
+│   ├── ProductInfo.tsx         # 产品基本信息
+│   ├── VariantSelector.tsx     # 变体选择器
+│   ├── VariantTable.tsx        # 变体价格表
+│   ├── PriceHistoryChart.tsx   # 价格历史图表
+│   ├── StockHistoryChart.tsx   # 库存历史图表
+│   ├── DiscountHistory.tsx     # 折扣历史
+│   ├── ProductFeatures.tsx     # 产品特性标签
+│   └── index.ts
+└── ProductDetail.tsx           # 更新
+```
+
+#### API 依赖
+
+- `getProductById(id)` - 已实现，返回完整产品信息含 variants, tags, options, specs
+- `getVariantHistory(sku)` - 已实现，获取变体历史记录
+
 ### 组件规格
 
 #### VariantSelector 变体选择器
@@ -261,33 +315,37 @@ components/
 Props: options[], variants[], selectedVariant, onSelect
 功能: 根据选项 (Color/Length) 选择具体变体
 显示: 选项按钮组，选中高亮
+条件: 仅多变体产品显示 (variantCount > 1)
 ```
 
 #### VariantTable 变体价格表
 ```
-列: SKU | Option | Price | Regular Price | Discount | Stock
+列: SKU | Display Name | Price | Regular Price | Discount | Stock
 显示: 所有变体的详细信息
+功能: 点击行选中对应变体
 ```
 
 #### PriceHistoryChart 增强
 ```
 新增: SKU 选择器下拉框
 功能: 选择 "All" 显示所有变体，选择具体 SKU 显示单条线
+数据源: variant_history 表
 折扣期间: 使用不同颜色标记
 ```
 
 #### DiscountHistory 折扣历史
 ```
 表格: 日期 | 原价 | 折扣价 | 折扣% | 状态
-数据: 从 variant_history 聚合
+数据: 从 variant_history 聚合有折扣的记录
 ```
 
 #### ProductFeatures 产品特性
 ```
-分类显示标签:
-- 网络特性: 10G SFP+, 2.5 GbE, ...
-- 容量: UniFi Devices: 30, ...
-- 促销: Black Friday
+分类显示标签 (from product_tags):
+- 网络特性 (feature): 10G SFP+, 2.5 GbE, ...
+- 容量 (capacity): UniFi Devices: 30, ...
+- PoE (poe): PoE++, ...
+- 促销 (promo): Black Friday
 ```
 
 ### 验收标准
@@ -425,6 +483,7 @@ Props: options[], variants[], selectedVariant, onSelect
 | 2025-11-21 | - | 项目规划文档创建 |
 | 2025-11-21 | v2.0.0 | Phase 1 代码开发完成：supabase_schema_v2.sql, crawler.ts, types.ts, storeService.ts |
 | 2025-11-22 | v2.0.0 | Phase 1 验收通过，数据入库成功 (425 products, 688 variants, 3257 tags) |
+| 2025-11-21 | v2.1.0 | Phase 2 Dashboard 增强完成：StatsOverview, FilterBar, QuickFilters, ProductTable, PriceDisplay, DiscountBadge, PromoTag |
 
 ---
 
