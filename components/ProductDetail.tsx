@@ -10,7 +10,7 @@ import {
   PriceHistoryChart,
   StockHistoryChart,
   DiscountHistory,
-  ProductFeatures,
+  ProductTags,
 } from './product';
 
 type TabType = 'price' | 'stock' | 'discount' | 'features';
@@ -59,7 +59,7 @@ export const ProductDetail: React.FC = () => {
     { id: 'price', label: 'Price History', icon: TrendingUp },
     { id: 'stock', label: 'Stock History', icon: Package },
     { id: 'discount', label: 'Discounts', icon: Percent },
-    { id: 'features', label: 'Features', icon: Sparkles },
+    { id: 'features', label: 'Tags', icon: Sparkles },
   ];
 
   if (isLoading) {
@@ -155,7 +155,7 @@ export const ProductDetail: React.FC = () => {
                 <DiscountHistory variants={variants} selectedVariant={selectedVariant} />
               )}
               {activeTab === 'features' && (
-                <ProductFeatures tags={tags} specs={specs} />
+                <ProductTags tags={tags} specs={specs} />
               )}
             </div>
           </div>

@@ -6,6 +6,7 @@ import { StatsOverview } from './dashboard/StatsOverview';
 import { FilterBar } from './dashboard/FilterBar';
 import { QuickFilters, QuickFilterType } from './dashboard/QuickFilters';
 import { ProductTable } from './dashboard/ProductTable';
+import { ColumnToggle, ColumnDef } from './dashboard/ColumnToggle';
 
 // Category order for sorting
 const CATEGORY_ORDER = [
@@ -44,6 +45,18 @@ export const Dashboard: React.FC = () => {
   const [discountFilter, setDiscountFilter] = useState<DiscountFilter>(DiscountFilter.All);
   const [quickFilters, setQuickFilters] = useState<QuickFilterType[]>([]);
 
+  // Columns state
+  const [columns, setColumns] = useState<ColumnDef[]>([
+    { key: 'product', label: 'Product', visible: true },
+    { key: 'sku', label: 'SKU', visible: false },
+    { key: 'category', label: 'Category', visible: true },
+    { key: 'tags', label: 'Tags', visible: false },
+    { key: 'price', label: 'Price', visible: true },
+    { key: 'status', label: 'Stock Status', visible: true },
+    { key: 'lastCheck', label: 'Updated', visible: true },
+    { key: 'actions', label: 'Actions', visible: true },
+  ]);
+
   // Initial data fetch
   useEffect(() => {
     const fetchData = async () => {
@@ -64,8 +77,8 @@ export const Dashboard: React.FC = () => {
   const handleRefresh = async () => {
     setIsLoading(true);
     const [productsData, statsData] = await Promise.all([
-      storeService.getProducts(),
-      storeService.getDashboardStats(),
+      storeService.getProducts(undefined, true),
+      storeService.getDashboardStats(true),
     ]);
     setProducts(productsData);
     setStats(statsData);
@@ -190,9 +203,8 @@ export const Dashboard: React.FC = () => {
         <button
           onClick={handleRefresh}
           disabled={isLoading}
-          className={`flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all ${
-            isLoading ? 'opacity-75 cursor-wait' : ''
-          }`}
+          className={`flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all ${isLoading ? 'opacity-75 cursor-wait' : ''
+            }`}
         >
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
           {isLoading ? 'Refreshing...' : 'Refresh Data'}
@@ -209,9 +221,8 @@ export const Dashboard: React.FC = () => {
             <React.Fragment key={cat}>
               <button
                 onClick={() => setCategoryFilter(cat)}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  categoryFilter === cat ? 'text-blue-600 font-bold' : 'text-slate-500'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${categoryFilter === cat ? 'text-blue-600 font-bold' : 'text-slate-500'
+                  }`}
               >
                 {formatCategory(cat)}{' '}
                 <span className="ml-0.5 text-xs opacity-70">({getCategoryCount(cat)})</span>
@@ -243,9 +254,12 @@ export const Dashboard: React.FC = () => {
         onClearAll={handleClearQuickFilters}
       />
 
-      {/* Results Count */}
-      <div className="text-sm text-slate-500">
-        Showing {filteredProducts.length} of {products.length} products
+      {/* Results Count & Column Toggle */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="text-sm text-slate-500">
+          Showing {filteredProducts.length} of {products.length} products
+        </div>
+        <ColumnToggle columns={columns} onColumnChange={setColumns} />
       </div>
 
       {/* Product Table */}
@@ -253,6 +267,7 @@ export const Dashboard: React.FC = () => {
         products={filteredProducts}
         isLoading={isLoading && products.length === 0}
         formatCategory={formatCategory}
+        columns={columns}
       />
     </div>
   );

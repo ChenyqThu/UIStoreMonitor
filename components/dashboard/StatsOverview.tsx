@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StatsCard } from '../common/StatsCard';
+import { Skeleton } from '../common/Skeleton';
 import { DashboardStats } from '../../types';
 import * as storeService from '../../services/storeService';
 import { Package, CheckCircle, XCircle, Percent, TrendingDown } from 'lucide-react';
@@ -34,9 +35,9 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats, isLoading }
     return (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="bg-white rounded-xl border border-slate-200 p-4 animate-pulse">
-            <div className="h-4 bg-slate-200 rounded w-20 mb-2" />
-            <div className="h-8 bg-slate-200 rounded w-16" />
+          <div key={i} className="bg-white rounded-xl border border-slate-200 p-4">
+            <Skeleton width={80} height={16} className="mb-2" />
+            <Skeleton width={60} height={32} />
           </div>
         ))}
       </div>

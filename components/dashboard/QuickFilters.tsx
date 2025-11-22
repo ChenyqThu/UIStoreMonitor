@@ -2,7 +2,7 @@ import React from 'react';
 import { Flame, Percent, CheckCircle, Sparkles, X } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
-export type QuickFilterType = 'black-friday' | 'on-sale' | 'in-stock' | 'new';
+export type QuickFilterType = 'on-sale' | 'in-stock' | 'new';
 
 interface QuickFilter {
   id: QuickFilterType;
@@ -13,13 +13,7 @@ interface QuickFilter {
 }
 
 const QUICK_FILTERS: QuickFilter[] = [
-  {
-    id: 'black-friday',
-    label: 'Black Friday',
-    icon: Flame,
-    colorClass: 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-200',
-    activeColorClass: 'bg-orange-500 text-white border-orange-600',
-  },
+
   {
     id: 'on-sale',
     label: 'On Sale',
@@ -64,9 +58,8 @@ export const QuickFilters: React.FC<QuickFiltersProps> = ({
           <button
             key={filter.id}
             onClick={() => onFilterToggle(filter.id)}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border transition-all ${
-              isActive ? filter.activeColorClass : filter.colorClass
-            }`}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full border transition-all ${isActive ? filter.activeColorClass : filter.colorClass
+              }`}
           >
             <Icon className="w-3.5 h-3.5" />
             {filter.label}

@@ -112,8 +112,25 @@ function mapHistory(h: any): VariantHistory {
 // Products API
 // ============================================
 
-export async function getProducts(filters?: ProductFilters): Promise<Product[]> {
-  let query = supabase.from('products').select('*');
+// Simple in-memory cache
+const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+let productsCache: { data: Product[]; timestamp: number } | null = null;
+let statsCache: { data: DashboardStats | null; timestamp: number } | null = null;
+
+export async function getProducts(filters?: ProductFilters, forceRefresh = false): Promise<Product[]> {
+  // Return cached data if available, valid, no filters are applied (or we could filter in memory), and not forced
+  const isCacheValid = productsCache && (Date.now() - productsCache.timestamp < CACHE_TTL);
+  const isRequestingAll = !filters || Object.keys(filters).length === 0;
+
+  if (isRequestingAll && isCacheValid && !forceRefresh && productsCache) {
+    return productsCache.data;
+  }
+
+  let query = supabase.from('products').select(`
+    *,
+    product_tags (tag_value, tag_type),
+    product_variants (sku, in_stock)
+  `);
 
   // Apply filters
   if (filters?.category) {
@@ -143,7 +160,38 @@ export async function getProducts(filters?: ProductFilters): Promise<Product[]> 
     return [];
   }
 
-  return data.map(mapProduct);
+  const mappedProducts = data.map(p => {
+    const product = mapProduct(p);
+    // Map tags if available
+    if (p.product_tags) {
+      product.tags = p.product_tags.map((t: any) => ({
+        id: 0, // Placeholder as we only selected values
+        productId: p.id,
+        tagName: t.tag_value, // Use value as name for display
+        tagType: t.tag_type,
+        tagValue: t.tag_value
+      }));
+    }
+    // Map variants for SKU display
+    if (p.product_variants) {
+      product.variants = p.product_variants.map((v: any) => ({
+        ...mapVariant(v), // This might fail if we don't select all fields, but we only need SKU
+        sku: v.sku,
+        inStock: v.in_stock
+      }));
+    }
+    return product;
+  });
+
+  // Update cache if this was a full fetch
+  if (isRequestingAll) {
+    productsCache = {
+      data: mappedProducts,
+      timestamp: Date.now()
+    };
+  }
+
+  return mappedProducts;
 }
 
 export async function getProductById(id: string): Promise<Product | null> {
@@ -297,7 +345,11 @@ export async function getCategories(): Promise<Category[]> {
 // Dashboard Stats API
 // ============================================
 
-export async function getDashboardStats(): Promise<DashboardStats | null> {
+export async function getDashboardStats(forceRefresh = false): Promise<DashboardStats | null> {
+  if (!forceRefresh && statsCache && (Date.now() - statsCache.timestamp < CACHE_TTL)) {
+    return statsCache.data;
+  }
+
   const { data, error } = await supabase.rpc('get_dashboard_stats');
 
   if (error) {
@@ -308,7 +360,7 @@ export async function getDashboardStats(): Promise<DashboardStats | null> {
   if (!data || data.length === 0) return null;
 
   const stats = data[0];
-  return {
+  const result = {
     totalProducts: stats.total_products,
     totalVariants: stats.total_variants,
     inStockVariants: stats.in_stock_variants,
@@ -317,6 +369,13 @@ export async function getDashboardStats(): Promise<DashboardStats | null> {
     avgDiscount: stats.avg_discount,
     maxDiscount: stats.max_discount,
   };
+
+  statsCache = {
+    data: result,
+    timestamp: Date.now()
+  };
+
+  return result;
 }
 
 export async function getCategoryStats(): Promise<CategoryStats[]> {
@@ -456,37 +515,4 @@ export async function getUniqueTagValues(tagType?: string): Promise<string[]> {
   return [...new Set(data.map((t: any) => t.tag_value))];
 }
 
-// ============================================
-// Legacy API (backwards compatibility)
-// ============================================
 
-/** @deprecated Use getProducts() with new types instead */
-export async function getProductsLegacy(): Promise<any[]> {
-  const products = await getProducts();
-  return products.map(p => ({
-    id: p.id,
-    name: p.name,
-    sku: p.id, // Use id as sku for legacy
-    category: p.categorySlug,
-    subcategory: p.subcategoryId,
-    currentPrice: p.minPrice,
-    currency: p.currency,
-    inStock: p.status === 'Available',
-    imageUrl: p.imageUrl,
-    url: p.url,
-    lastUpdated: p.lastUpdated,
-    history: [],
-  }));
-}
-
-/** @deprecated No longer used - crawler handles data updates */
-export async function simulateDailyScan(): Promise<Product[]> {
-  console.warn('simulateDailyScan is deprecated. Use the crawler script to update data.');
-  return getProducts();
-}
-
-/** @deprecated No longer used - data is managed via Supabase */
-export async function resetData(): Promise<Product[]> {
-  console.warn('resetData is deprecated for Supabase backend.');
-  return getProducts();
-}

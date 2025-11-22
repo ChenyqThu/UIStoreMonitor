@@ -22,12 +22,29 @@ main (稳定版 v1.x)
   │
   └── develop (开发版 v2.x) ← 当前开发分支
         │
-        ├── v2.0.0 - 数据库重构 + 爬虫更新
-        ├── v2.1.0 - Dashboard 增强
-        ├── v2.2.0 - ProductDetail 重构
-        ├── v2.3.0 - 新增页面 (Deals/Alerts)
-        └── v2.4.0 - 优化完善 → 合并回 main
+        ├── Phase 1: 数据库重构 + 爬虫更新
+        ├── Phase 2: Dashboard 增强
+        ├── Phase 3: ProductDetail 重构
+        ├── Phase 4: 新增页面 (Deals/Alerts)
+        └── Phase 5: 优化完善 → 合并回 main
 ```
+
+### v2.4.0 (Optimization & Polish)
+- **Dashboard Enhancements**:
+  - Customizable columns (Toggle visibility & Reorder).
+  - New "Tags" and "SKU" columns.
+  - Mobile-optimized card view.
+- **Performance**:
+  - In-memory data caching (10min TTL) for faster navigation.
+  - Skeleton loading states for better UX.
+- **Code Quality**:
+  - Removed legacy code and unified types.
+  - Global Toast notification system.
+
+### v2.3.0 (New Pages)
+- **Phase 4**: New Pages (Deals & Alerts) - **Completed**
+- **Phase 5**: Optimization & Polish (UI/UX, Caching) - **Completed**
+- **Phase 6**: Advanced Features (User Accounts, Notifications) - *Planned*
 
 ### 开发规范
 
@@ -53,6 +70,9 @@ git add .
 git commit -m "feat: xxx"
 git push origin develop
 ```
+
+Current Version: **v2.4.0**
+Status: **Active Development**
 
 ---
 

@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
           </div>
           <div className="flex items-center">
             <span className="text-xs text-slate-400 bg-slate-50 px-2 py-1 rounded-full border border-slate-100">
-              v1.0.0
+              v2.4.0
             </span>
           </div>
         </div>

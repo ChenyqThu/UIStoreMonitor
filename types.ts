@@ -224,21 +224,4 @@ export interface ProductFilters {
   tags?: string[];
 }
 
-// ============================================
-// Legacy Types (for backwards compatibility)
-// ============================================
 
-/** @deprecated Use VariantHistory instead */
-export interface ProductHistory {
-  date: string;
-  price: number;
-  inStock: boolean;
-}
-
-/** @deprecated Use the categorized FilterCategory approach */
-export enum FilterCategory {
-  All = 'All',
-  Cameras = 'Cameras',
-  Network = 'Network',
-  Access = 'Access',
-}
