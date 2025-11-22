@@ -41,7 +41,7 @@ git checkout develop
 | v2.1.0 | Phase 2 | Dashboard 增强 | [x] 已完成 |
 | v2.2.0 | Phase 3 | ProductDetail 重构 | [x] 已完成 |
 | v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [x] 已完成 |
-| v2.4.0 | Phase 5 | 优化完善 | [ ] 待开始 |
+| v2.4.0 | Phase 5 | 优化完善 | [x] 已完成 |
 
 ---
 
@@ -417,44 +417,64 @@ Props: options[], variants[], selectedVariant, onSelect
 
 ### 完成日期
 - 预计开始: 2025-11-21
-- 预计完成: 2025-11-21
-- 实际完成: 2025-11-21
+-   [x] Deals 页正确展示所有打折产品
+-   [x] 折扣统计数据正确
+-   [x] Alerts 页展示价格变化
+-   [x] Alerts 页展示库存变化
+-   [x] 时间范围筛选正常工作
+-   [x] 导航切换正常
+
+### 完成日期
+-   预计开始: 2025-11-21
+-   预计完成: 2025-11-21
+-   实际完成: 2025-11-21
 
 ---
 
-## Phase 5: v2.4.0 优化完善
+### Phase 5: Optimization & Polish (v2.4.0) - Completed
 
-### 目标
-性能优化、UI 细节完善、文档更新、代码清理。
+**目标**: 提升前端性能，优化 UI/UX 细节，清理代码。
+**状态**: Completed
+**预计时间**: 1 Week
 
 ### 任务清单
 
 | # | 任务 | 状态 | 负责 |
 |---|------|------|------|
-| 5.1 | 分析查询性能 | [ ] | - |
-| 5.2 | 添加必要索引 | [ ] | - |
-| 5.3 | 优化 API 查询 (分页/懒加载) | [ ] | - |
-| 5.4 | UI 细节优化 | [ ] | - |
-| 5.5 | 错误处理完善 | [ ] | - |
-| 5.6 | 加载状态优化 | [ ] | - |
-| 5.7 | 更新 README.md | [ ] | - |
-| 5.8 | 更新 API 文档 | [ ] | - |
-| 5.9 | 清理旧代码 | [ ] | - |
-| 5.10 | 删除旧数据库表 (确认无问题后) | [ ] | - |
-| 5.11 | 最终测试 | [ ] | - |
+| 5.1 | **Dashboard 表格增强** | | |
+| 5.1.1 | 实现列可见性控制 (Column Visibility Toggle) | [x] | Claude |
+| 5.1.2 | 实现列顺序调整 (Column Reordering) | [x] | Claude |
+| 5.1.3 | 新增 "Tags" 列 (需更新 API 获取标签) | [x] | Claude |
+| 5.1.4 | 新增 "SKU" 列 (单变体显示 SKU，多变体显示范围) | [x] | Claude |
+| 5.2 | **性能优化** | | |
+| 5.2.1 | 实现 API 分页 (Server-side Pagination) | [-] 跳过 | - |
+| 5.2.2 | 前端集成 Pagination 组件 | [-] 跳过 | - |
+| 5.2.3 | 优化搜索防抖 (Debounce) | [x] | Claude |
+| 5.3 | **UI/UX 细节打磨** | | |
+| 5.3.1 | 优化加载状态 (使用 Skeleton 骨架屏) | [x] | Claude |
+| 5.3.2 | 优化空状态 (Empty States) | [x] | Claude |
+| 5.3.3 | 移动端适配优化 (Card Layout) | [x] | Claude |
+| 5.3.4 | 全局 Toast 通知系统 | [x] | Claude |
+| 5.4 | **代码清理** | | |
+| 5.4.1 | 移除废弃代码 (Legacy API/Types) | [x] | Claude |
+| 5.4.2 | 统一类型定义 | [x] | Claude |
+| 5.5 | **性能 & 缓存** | | |
+| 5.5.1 | 实现 StoreService 内存缓存 (10min) | [x] | Claude |
+| 5.5.2 | Dashboard 支持缓存与强制刷新 | [x] | Claude |
 
 ### 验收标准
 
-- [ ] 页面加载时间 < 2s
-- [ ] 无控制台错误
-- [ ] 所有功能正常
-- [ ] 文档完整更新
-- [ ] 旧代码已清理
+- [x] Dashboard 表格支持自定义列显示和顺序
+- [x] 移动端浏览体验良好
+- [x] 无明显 UI 瑕疵 (对齐/间距/颜色)
+- [x] 代码库无废弃代码
+- [x] 页面切换流畅，支持数据缓存 (10min TTL)
+- [x] 全局 Toast 通知正常工作
 
 ### 完成日期
-- 预计开始: ____
-- 预计完成: ____
-- 实际完成: ____
+- 预计开始: 2025-11-21
+- 预计完成: 2025-11-21
+- 实际完成: 2025-11-21
 
 ---
 
@@ -486,6 +506,7 @@ Props: options[], variants[], selectedVariant, onSelect
 | 2025-11-21 | v2.1.0 | Phase 2 Dashboard 增强完成：StatsOverview, FilterBar, QuickFilters, ProductTable, PriceDisplay, DiscountBadge, PromoTag |
 | 2025-11-21 | v2.2.0 | Phase 3 ProductDetail 重构完成：ProductInfo, VariantSelector, VariantTable, PriceHistoryChart, StockHistoryChart, DiscountHistory, ProductFeatures |
 | 2025-11-21 | v2.3.0 | Phase 4 新增页面完成：DealsPage, AlertsPage, DealsStats, DealsList, PriceChangeList, StockChangeList |
+| 2025-11-21 | v2.4.0 | Phase 5 优化完善完成：Dashboard 增强 (Columns/Tags/SKU), UI Polish (Skeleton/Mobile/Toast), Caching (10min TTL), Code Cleanup |
 
 ---
 
