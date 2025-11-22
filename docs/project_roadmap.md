@@ -37,7 +37,7 @@ git checkout develop
 
 | 版本 | 阶段 | 目标 | 状态 |
 |------|------|------|------|
-| v2.0.0 | Phase 1 | 数据库重构 + 爬虫更新 | [ ] 待开始 |
+| v2.0.0 | Phase 1 | 数据库重构 + 爬虫更新 | [x] 已完成 |
 | v2.1.0 | Phase 2 | Dashboard 增强 | [ ] 待开始 |
 | v2.2.0 | Phase 3 | ProductDetail 重构 | [ ] 待开始 |
 | v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [ ] 待开始 |
@@ -54,18 +54,18 @@ git checkout develop
 
 | # | 任务 | 状态 | 负责 |
 |---|------|------|------|
-| 1.1 | 创建新数据库 Schema SQL 文件 | [ ] | - |
-| 1.2 | 在 Supabase 执行新表创建 | [ ] | - |
-| 1.3 | 重写 crawler.ts 爬虫脚本 | [ ] | - |
-| 1.4 | 添加标签解析逻辑 | [ ] | - |
-| 1.5 | 添加变体数据采集逻辑 | [ ] | - |
-| 1.6 | 添加选项数据采集逻辑 | [ ] | - |
-| 1.7 | 添加技术规格采集逻辑 | [ ] | - |
-| 1.8 | 添加关联产品采集逻辑 | [ ] | - |
-| 1.9 | 运行爬虫测试 | [ ] | - |
-| 1.10 | 验证数据完整性 | [ ] | - |
-| 1.11 | 更新 storeService.ts | [ ] | - |
-| 1.12 | 更新 types.ts 数据模型 | [ ] | - |
+| 1.1 | 创建新数据库 Schema SQL 文件 | [x] | Claude |
+| 1.2 | 在 Supabase 执行新表创建 | [x] | 用户 |
+| 1.3 | 重写 crawler.ts 爬虫脚本 | [x] | Claude |
+| 1.4 | 添加标签解析逻辑 | [x] | Claude |
+| 1.5 | 添加变体数据采集逻辑 | [x] | Claude |
+| 1.6 | 添加选项数据采集逻辑 | [x] | Claude |
+| 1.7 | 添加技术规格采集逻辑 | [x] | Claude |
+| 1.8 | 添加关联产品采集逻辑 | [x] | Claude |
+| 1.9 | 运行爬虫测试 | [x] | 用户 |
+| 1.10 | 验证数据完整性 | [x] | 用户 |
+| 1.11 | 更新 storeService.ts | [x] | Claude |
+| 1.12 | 更新 types.ts 数据模型 | [x] | Claude |
 
 ### 详细说明
 
@@ -98,18 +98,30 @@ git checkout develop
 
 ### 验收标准
 
-- [ ] 所有 8 个类别的产品正确入库
-- [ ] 产品数量与 API 返回一致
-- [ ] 多变体产品的所有 SKU 都已存储
-- [ ] 折扣信息正确记录 (current_price, regular_price, discount_percent)
-- [ ] 标签正确解析 (tag_type, tag_value)
-- [ ] 选项正确存储 (Color, Length 等)
-- [ ] 历史记录正确写入
+- [x] 所有 8 个类别的产品正确入库 (425 products)
+- [x] 产品数量与 API 返回一致
+- [x] 多变体产品的所有 SKU 都已存储 (688 variants)
+- [x] 折扣信息正确记录 (current_price, regular_price, discount_percent)
+- [x] 标签正确解析 (tag_type, tag_value) - 3257 tags
+- [x] 选项正确存储 (Color, Length 等) - 166 options
+- [x] 历史记录正确写入 (688 history records)
+- [x] 技术规格正确存储 - 325 specs
 
 ### 完成日期
-- 预计开始: ____
-- 预计完成: ____
-- 实际完成: ____
+- 预计开始: 2025-11-21
+- 预计完成: 2025-11-21
+- 实际完成: 2025-11-22
+
+### 执行结果
+
+```
+Products: 425
+Variants: 688
+Tags: 3257
+Options: 166
+Specs: 325
+History: 688
+```
 
 ---
 
@@ -120,19 +132,64 @@ git checkout develop
 
 ### 任务清单
 
-| # | 任务 | 状态 | 负责 |
-|---|------|------|------|
-| 2.1 | 创建 StatsOverview 组件 | [ ] | - |
-| 2.2 | 创建 StatsCard 通用组件 | [ ] | - |
-| 2.3 | 添加统计数据查询 API | [ ] | - |
-| 2.4 | 增强 FilterBar 组件 | [ ] | - |
-| 2.5 | 创建 QuickFilters 组件 | [ ] | - |
-| 2.6 | 更新 ProductTable 显示折扣 | [ ] | - |
-| 2.7 | 创建 PriceDisplay 组件 | [ ] | - |
-| 2.8 | 创建 DiscountBadge 组件 | [ ] | - |
-| 2.9 | 创建 PromoTag 组件 | [ ] | - |
-| 2.10 | 更新排序选项 (添加折扣排序) | [ ] | - |
-| 2.11 | 集成测试 | [ ] | - |
+| # | 任务 | 状态 | 复杂度 | 负责 |
+|---|------|------|--------|------|
+| 2.0 | 更新 Dashboard.tsx 适配新数据结构 | [ ] | 高 | - |
+| 2.1 | 创建 StatsOverview 组件 | [ ] | 中 | - |
+| 2.2 | 创建 StatsCard 通用组件 | [ ] | 低 | - |
+| 2.3 | 添加统计数据查询 API | [x] | - | Claude |
+| 2.4 | 增强 FilterBar 组件 | [ ] | 中 | - |
+| 2.5 | 创建 QuickFilters 组件 | [ ] | 中 | - |
+| 2.6 | 更新 ProductTable 显示折扣 | [ ] | 高 | - |
+| 2.7 | 创建 PriceDisplay 组件 | [ ] | 低 | - |
+| 2.8 | 创建 DiscountBadge 组件 | [ ] | 低 | - |
+| 2.9 | 创建 PromoTag 组件 | [ ] | 低 | - |
+| 2.10 | 更新排序选项 (添加折扣排序) | [ ] | 低 | - |
+| 2.11 | 集成测试 | [ ] | - | - |
+
+### 开发准备 (Review 2025-11-22)
+
+#### 字段映射 (旧 → 新)
+
+| 旧字段 | 新字段 | 说明 |
+|--------|--------|------|
+| `currentPrice` | `minPrice` / `maxPrice` | 价格区间 |
+| `inStock` | `status === 'Available'` | 库存状态 |
+| `category` | `categorySlug` | 类别字段名 |
+| `subcategory` | `subcategoryId` | 子类别字段名 |
+| - | `hasDiscount` | 新增：是否有折扣 |
+| - | `variantCount` | 新增：变体数量 |
+
+#### 建议开发顺序
+
+1. **2.0 更新 Dashboard.tsx** - 适配新数据结构，确保基础功能正常
+2. **2.2/2.7/2.8/2.9 创建通用组件** - StatsCard, PriceDisplay, DiscountBadge, PromoTag
+3. **2.1 创建 StatsOverview** - 调用 `getDashboardStats()` 显示统计卡片
+4. **2.4 增强 FilterBar** - 添加库存/折扣筛选下拉框
+5. **2.5 创建 QuickFilters** - 添加标签快捷筛选
+6. **2.6 更新 ProductTable** - 显示折扣信息、变体数量
+7. **2.10 更新排序选项** - 添加折扣排序
+8. **2.11 集成测试**
+
+#### 组件目录结构
+
+```
+components/
+├── common/
+│   ├── StatsCard.tsx
+│   ├── PriceDisplay.tsx
+│   ├── DiscountBadge.tsx
+│   └── PromoTag.tsx
+├── dashboard/
+│   ├── StatsOverview.tsx
+│   ├── FilterBar.tsx
+│   ├── QuickFilters.tsx
+│   └── ProductTable.tsx
+├── Dashboard.tsx
+├── ProductDetail.tsx
+├── Navbar.tsx
+└── Layout.tsx
+```
 
 ### 组件规格
 
@@ -366,6 +423,8 @@ Props: options[], variants[], selectedVariant, onSelect
 | 日期 | 版本 | 变更内容 |
 |------|------|----------|
 | 2025-11-21 | - | 项目规划文档创建 |
+| 2025-11-21 | v2.0.0 | Phase 1 代码开发完成：supabase_schema_v2.sql, crawler.ts, types.ts, storeService.ts |
+| 2025-11-22 | v2.0.0 | Phase 1 验收通过，数据入库成功 (425 products, 688 variants, 3257 tags) |
 
 ---
 
