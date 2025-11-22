@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { Product, ProductVariant } from '../types';
 import * as storeService from '../services/storeService';
 import { ArrowLeft, TrendingUp, Package, Percent, Sparkles, Layers } from 'lucide-react';
@@ -18,10 +18,15 @@ type TabType = 'price' | 'stock' | 'discount' | 'features';
 export const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
   const [product, setProduct] = useState<Product | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('price');
   const [isLoading, setIsLoading] = useState(true);
+
+  // Determine back link from location state
+  const backLink = location.state?.from === '/deals' ? '/deals' : '/';
+  const backLabel = location.state?.from === '/deals' ? 'Back to Deals' : 'Back to Dashboard';
 
   // Fetch product data
   useEffect(() => {
@@ -78,8 +83,8 @@ export const ProductDetail: React.FC = () => {
     <div className="max-w-6xl mx-auto space-y-6 animate-fade-in">
       {/* Breadcrumb & Back */}
       <div className="flex items-center gap-2 text-sm text-slate-500">
-        <Link to="/" className="hover:text-slate-900 flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+        <Link to={backLink} className="hover:text-slate-900 flex items-center gap-1">
+          <ArrowLeft className="w-4 h-4" /> {backLabel}
         </Link>
         <span>/</span>
         <span className="text-slate-900 font-medium truncate max-w-[300px]">{product.name}</span>
@@ -128,9 +133,8 @@ export const ProductDetail: React.FC = () => {
                       `}
                     >
                       <Icon
-                        className={`w-5 h-5 mr-2 ${
-                          isActive ? 'text-blue-500' : 'text-slate-400 group-hover:text-slate-500'
-                        }`}
+                        className={`w-5 h-5 mr-2 ${isActive ? 'text-blue-500' : 'text-slate-400 group-hover:text-slate-500'
+                          }`}
                       />
                       {tab.label}
                     </button>

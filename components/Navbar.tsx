@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Wifi, Activity, BarChart2 } from 'lucide-react';
+import { Wifi, Activity, BarChart2, Tag, Bell } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const location = useLocation();
@@ -17,14 +17,33 @@ export const Navbar: React.FC = () => {
             <div className="hidden md:flex space-x-4">
               <Link
                 to="/"
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                  location.pathname === '/'
-                    ? 'border-blue-500 text-gray-900'
-                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                }`}
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${location.pathname === '/'
+                  ? 'border-blue-500 text-gray-900'
+                  : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  }`}
               >
                 <Activity className="w-4 h-4 mr-2" />
                 Dashboard
+              </Link>
+              <Link
+                to="/deals"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${location.pathname === '/deals'
+                  ? 'border-blue-500 text-gray-900'
+                  : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  }`}
+              >
+                <Tag className="w-4 h-4 mr-2" />
+                Deals
+              </Link>
+              <Link
+                to="/alerts"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${location.pathname === '/alerts'
+                  ? 'border-blue-500 text-gray-900'
+                  : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  }`}
+              >
+                <Bell className="w-4 h-4 mr-2" />
+                Alerts
               </Link>
             </div>
           </div>

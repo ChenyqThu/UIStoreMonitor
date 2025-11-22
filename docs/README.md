@@ -63,7 +63,7 @@ git push origin develop
 | v2.0.0 | 数据库重构 + 爬虫更新 | [x] 已完成 (2025-11-22) |
 | v2.1.0 | Dashboard 增强 | [x] 已完成 (2025-11-21) |
 | v2.2.0 | ProductDetail 重构 | [x] 已完成 (2025-11-21) |
-| v2.3.0 | 新增 Deals/Alerts 页面 | [ ] 待开始 |
+| v2.3.0 | 新增 Deals/Alerts 页面 | [x] 已完成 (2025-11-21) |
 | v2.4.0 | 优化完善 | [ ] 待开始 |
 
 详细任务清单见 [项目路线图](./project_roadmap.md)

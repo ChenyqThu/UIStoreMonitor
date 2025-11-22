@@ -40,7 +40,7 @@ git checkout develop
 | v2.0.0 | Phase 1 | 数据库重构 + 爬虫更新 | [x] 已完成 |
 | v2.1.0 | Phase 2 | Dashboard 增强 | [x] 已完成 |
 | v2.2.0 | Phase 3 | ProductDetail 重构 | [x] 已完成 |
-| v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [ ] 待开始 |
+| v2.3.0 | Phase 4 | 新增页面 (Deals/Alerts) | [x] 已完成 |
 | v2.4.0 | Phase 5 | 优化完善 | [ ] 待开始 |
 
 ---
@@ -373,17 +373,17 @@ Props: options[], variants[], selectedVariant, onSelect
 
 | # | 任务 | 状态 | 负责 |
 |---|------|------|------|
-| 4.1 | 创建 DealsPage 页面 | [ ] | - |
-| 4.2 | 创建 DealsList 组件 | [ ] | - |
-| 4.3 | 创建 DealsStats 组件 | [ ] | - |
-| 4.4 | 添加 getDeals API | [ ] | - |
-| 4.5 | 创建 AlertsPage 页面 | [ ] | - |
-| 4.6 | 创建 PriceChangeList 组件 | [ ] | - |
-| 4.7 | 创建 StockChangeList 组件 | [ ] | - |
-| 4.8 | 添加变化检测 SQL 查询 | [ ] | - |
-| 4.9 | 更新 Navbar 添加导航项 | [ ] | - |
-| 4.10 | 更新路由配置 | [ ] | - |
-| 4.11 | 集成测试 | [ ] | - |
+| 4.1 | 创建 DealsPage 页面 | [x] | Claude |
+| 4.2 | 创建 DealsList 组件 | [x] | Claude |
+| 4.3 | 创建 DealsStats 组件 | [x] | Claude |
+| 4.4 | 添加 getDeals API | [x] | Claude |
+| 4.5 | 创建 AlertsPage 页面 | [x] | Claude |
+| 4.6 | 创建 PriceChangeList 组件 | [x] | Claude |
+| 4.7 | 创建 StockChangeList 组件 | [x] | Claude |
+| 4.8 | 添加变化检测 SQL 查询 | [x] | Claude |
+| 4.9 | 更新 Navbar 添加导航项 | [x] | Claude |
+| 4.10 | 更新路由配置 | [x] | Claude |
+| 4.11 | 集成测试 | [x] | Claude |
 
 ### 页面规格
 
@@ -408,17 +408,17 @@ Props: options[], variants[], selectedVariant, onSelect
 
 ### 验收标准
 
-- [ ] Deals 页正确展示所有打折产品
-- [ ] 折扣统计数据正确
-- [ ] Alerts 页展示价格变化
-- [ ] Alerts 页展示库存变化
-- [ ] 时间范围筛选正常工作
-- [ ] 导航切换正常
+- [x] Deals 页正确展示所有打折产品
+- [x] 折扣统计数据正确
+- [x] Alerts 页展示价格变化
+- [x] Alerts 页展示库存变化
+- [x] 时间范围筛选正常工作
+- [x] 导航切换正常
 
 ### 完成日期
-- 预计开始: ____
-- 预计完成: ____
-- 实际完成: ____
+- 预计开始: 2025-11-21
+- 预计完成: 2025-11-21
+- 实际完成: 2025-11-21
 
 ---
 
@@ -485,6 +485,7 @@ Props: options[], variants[], selectedVariant, onSelect
 | 2025-11-22 | v2.0.0 | Phase 1 验收通过，数据入库成功 (425 products, 688 variants, 3257 tags) |
 | 2025-11-21 | v2.1.0 | Phase 2 Dashboard 增强完成：StatsOverview, FilterBar, QuickFilters, ProductTable, PriceDisplay, DiscountBadge, PromoTag |
 | 2025-11-21 | v2.2.0 | Phase 3 ProductDetail 重构完成：ProductInfo, VariantSelector, VariantTable, PriceHistoryChart, StockHistoryChart, DiscountHistory, ProductFeatures |
+| 2025-11-21 | v2.3.0 | Phase 4 新增页面完成：DealsPage, AlertsPage, DealsStats, DealsList, PriceChangeList, StockChangeList |
 
 ---
 
