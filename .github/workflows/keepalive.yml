@@ -1,0 +1,24 @@
+name: Keep Alive
+
+on:
+  schedule:
+    # Runs every 50 days to prevent workflow from being disabled
+    - cron: '0 0 1,21 * *'  # 1st and 21st of each month
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          commit_message: 'chore: keep workflow alive [skip ci]'
+          committer_username: 'github-actions[bot]'
+          committer_email: 'github-actions[bot]@users.noreply.github.com'
